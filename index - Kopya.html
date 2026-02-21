@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Şişme bot üretimi, bakım ve yedek parça — BSE Marin İstanbul">
+<meta name="keywords" content="şişme bot, bot tamiri, deniz botu, BSE Marin">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSE Marin | Üretimden Bakıma, Denize Dair Her Şey</title>
+    <link rel="stylesheet" href="bse.css" />
+    <style>
+      /* Ürünlerin yan yana 3'lü dizilimi için CSS */
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        padding: 40px 0;
+      }
+      @media (max-width: 992px) {
+        .product-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 600px) {
+        .product-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+<nav>
+  <a href="#" class="logo">
+    <img src="resimler/bse logo.jpg" alt="BSE Marin Logo" />
+    <span>BSE MARIN</span>
+  </a>
+
+  <!-- Mobil Menü Butonu -->
+  <button class="menu-toggle" id="menu-toggle">☰</button>
+
+  <!-- Menü -->
+  <ul id="nav-menu">
+    <li><a href="#hakkimizda">Hakkımızda</a></li>
+    <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+    <li><a href="#katalog">Yedek Parça</a></li>
+    <li><a href="#iletisim">İletişim</a></li>
+    <li>
+      <button id="dark-mode-toggle" style="background:none;border:none;cursor:pointer;font-size:1.2rem;">🌙</button>
+    </li>
+  </ul>
+</nav>
+
+    <header class="hero">
+      <h1>BSE MARIN</h1>
+      <p>Üretimden Bakıma, Denize Dair Her Şey.</p>
+      <div class="hero-btns">
+        <a href="#katalog" class="btn btn-primary">Yedek Parça</a>
+        <a href="#modeller" class="btn btn-primary">Botlar</a>
+        <a href="https://wa.me/905362563371" class="btn btn-primary" style="background: rgba(255, 255, 255, 0.1); border: 1px solid 
+        white" target="_blank">Teklif Al</a>
+      </div>
+    </header>
+
+    <section id="hizmetler" style="padding: 80px 10%; text-align: center">
+      <h2 class="section-title">Neler Yapıyoruz?</h2>
+      <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+      <div class="card">
+    <span class="icon">🚤</span>
+    <h3>Şişme Bot Üretimi</h3>
+    <p>Kendi üretim tesisimizde, en yüksek standartlarda dayanıklı botlar inşa ediyoruz.</p>
+  
+         <a href="#modeller" class="model-btn">Modeller</a>
+        </div>
+        <div class="card">
+          <span class="icon">🛠️</span>
+          <h3>Bakım & Onarım</h3>
+          <p>Tüp değişimi, fiber gövde tamiri ve aksesuar yenileme hizmetleri sunuyoruz.</p>
+          <a href="https://wa.me/905362563371?text=Bakım ve onarım için teklif almak istiyorum." class="buy-btn" style="margin-top: 15px; background: #25d366; display: inline-block;">Bakım Teklifi Al</a>
+        </div>
+    <div class="card">
+  <span class="icon">⚙️</span>
+  <h3>Yedek Parça</h3>
+  <p>Aradığınız tüm şişme bot yedek parçalarını stoktan teslim sağlıyoruz.</p>
+  
+  <a href="#katalog" class="katalog-btn">Kataloğu İncele</a>
+</div>
+      </div>
+    </section>
+
+    <section id="katalog" style="padding: 60px 10%; text-align: center; background: #f4f7f6">
+      <h2 class="section-title">Yedek Parça Kataloğu</h2>
+      
+      <div style="margin: 20px auto 40px; max-width: 500px;">
+        <input type="text" id="urunArama" placeholder="Ürün ara..." style="width: 100%; padding: 15px 25px; border-radius: 30px; border: 2px solid var(--vurgu-renk); outline: none;">
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/ayna.jpg" alt="Ayna" /></div>
+          <div class="product-info">
+            <h3>Ayna</h3>
+            <p class="price">1000 TL</p>
+            <a href="https://wa.me/905362563371?text=Ayna siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/bot pompası.jpg" alt="Bot Pompası" /></div>
+          <div class="product-info">
+            <h3>Bot Pompası</h3>
+            <p class="price">800 TL</p>
+            <a href="https://wa.me/905362563371?text=Bot Pompası siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/halat aparatı ön.jpg" alt="Halat Aparatı Ön" /></div>
+          <div class="product-info">
+            <h3>Halat Aparatı Ön</h3>
+            <p class="price">300 TL</p>
+            <a href="https://wa.me/905362563371?text=Halat Aparatı Ön siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/halat aparatı yan.jpg" alt="Halat Aparatı Yan" /></div>
+          <div class="product-info">
+            <h3>Halat Aparatı Yan</h3>
+            <p class="price">200 TL</p>
+            <a href="https://wa.me/905362563371?text=Halat Aparatı Yan siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/ip aparatı beyaz.jpg" alt="İp Aparatı Beyaz" /></div>
+          <div class="product-info">
+            <h3>İp Aparatı Beyaz</h3>
+            <p class="price">120 TL</p>
+            <a href="https://wa.me/905362563371?text=İp Aparatı Beyaz siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/ip aparatı.jpg" alt="İp Aparatı Siyah" /></div>
+          <div class="product-info">
+            <h3>İp Aparatı Siyah</h3>
+            <p class="price">120 TL</p>
+            <a href="https://wa.me/905362563371?text=İp Aparatı Siyah siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/kol aparatı.jpg" alt="El Tutamağı Beyaz" /></div>
+          <div class="product-info">
+            <h3>El Tutamağı Beyaz</h3>
+            <p class="price">250 TL</p>
+            <a href="https://wa.me/905362563371?text=El Tutamağı Beyaz siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/kol 2 (1).jpg" alt="El Tutamağı Siyah" /></div>
+          <div class="product-info">
+            <h3>El Tutamağı Siyah</h3>
+            <p class="price">250 TL</p>
+            <a href="https://wa.me/905362563371?text=El Tutamağı Siyah siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/kürek tutma aparatı.jpg" alt="Iskarmoz Siyah Yuvarlak" /></div>
+          <div class="product-info">
+            <h3>Iskarmoz Siyah Yuvarlak</h3>
+            <p class="price">500 TL</p>
+            <a href="https://wa.me/905362563371?text=Iskarmoz Siyah Yuvarlak siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/kürek tutma aparatı 2.jpg" alt="Iskarmoz Siyah Düz" /></div>
+          <div class="product-info">
+            <h3>Iskarmoz Siyah Düz</h3>
+            <p class="price">500 TL</p>
+            <a href="https://wa.me/905362563371?text=Iskarmoz Siyah Düz siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/motor aparatı arka.jpg" alt="Motor Aparatı Arka" /></div>
+          <div class="product-info">
+            <h3>Motor Aparatı Arka</h3>
+            <p class="price">200 TL</p>
+            <a href="https://wa.me/905362563371?text=Motor Aparatı Arka siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/motor aparatı ön.jpg" alt="Motor Aparatı Ön" /></div>
+          <div class="product-info">
+            <h3>Motor Aparatı Ön</h3>
+            <p class="price">200 TL</p>
+            <a href="https://wa.me/905362563371?text=Motor Aparatı Ön siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/pompa ucu uzun.jpg" alt="Pompa Ucu Uzun" /></div>
+          <div class="product-info">
+            <h3>Pompa Ucu Uzun</h3>
+            <p class="price">100 TL</p>
+            <a href="https://wa.me/905362563371?text=Pompa Ucu Uzun siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/popma ucu kısa.jpg" alt="Pompa Ucu Kısa" /></div>
+          <div class="product-info">
+            <h3>Pompa Ucu Kısa</h3>
+            <p class="price">100 TL</p>
+            <a href="https://wa.me/905362563371?text=Pompa Ucu Kısa siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/taliye tıpası.jpg" alt="Tahliye Tapası Kızaklı" /></div>
+          <div class="product-info">
+            <h3>Tahliye Tapası Kızaklı</h3>
+            <p class="price">300 TL</p>
+            <a href="https://wa.me/905362563371?text=Tahliye Tapası siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+            <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/kürek.jpg" alt="Kürek Takımı" /></div>
+          <div class="product-info">
+            <h3>Kürek Takımı</h3>
+            <p class="price">1250 TL</p>
+            <a href="https://wa.me/905362563371?text=Kürek Takımı siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+
+         <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/aliniyum alt taban.jpg.jpeg" alt="Kürek Takımı" /></div>
+          <div class="product-info">
+            <h3>Alüminyum Alt Taban</h3>
+            <h4>ölçüye göre fiyat degişmektedir</h4>
+            <p class="price">2500 TL</p>
+            <a href="https://wa.me/905362563371?text= Alüminyum Alt Taban siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+          <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/bot usturmaç lastıgi .jpg.jpeg" alt="bot zırh usturmaç 1 metre " /></div>
+          <div class="product-info">
+            <h3>bot zırh usturmaç 1 metre</h3>
+            <p class="price">250 TL</p>
+            <a href="https://wa.me/905362563371?text=ot usturmaç lastıgi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+         <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/ayna.jpg" alt="Ayna" /></div>
+          <div class="product-info">
+            <h3>Ayna</h3>
+            <p class="price">1000 TL</p>
+            <a href="https://wa.me/905362563371?text=Ayna siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+           </div>
+         <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/yuvarlak tapa.jpg.jpeg" alt="tapa yuvarlak" /></div>
+          <div class="product-info">
+            <h3>Tahliye Tapası Yuvarlak</h3>
+            <p class="price">300 TL</p>
+            <a href="https://wa.me/905362563371?text=Ayna siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+          <div class="product-card">
+          <div class="product-tag">Stokta</div>
+          <div class="product-image"><img src="resimler/oturma tahtası.jpg.jpeg" alt="Ayna" /></div>
+          <div class="product-info">
+            <h3>Oturma tahtası</h3>
+            <p class="price">00 TL</p>
+            <a href="https://wa.me/905362563371?text=Ayna siparişi" class="buy-btn" target="_blank">WhatsApp Sipariş</a>
+          </div>
+        </div>
+      
+      </div>
+      
+       
+    </section>
+    <section id="modeller" style="padding: 80px 10%; text-align: center; background: #fff;">
+  <h2 class="section-title">Bot Modellerimiz</h2>
+  <p style="margin-bottom: 40px; color: var(--gri);">İhtiyacınıza uygun, yüksek performanslı şişme bot modellerimizi inceleyin.</p>
+  
+<div class="model-card">
+  <div class="slider-container">
+    <div class="model-image" id="slider">
+      <img src="resimler/WhatsApp Image 2026-02-17 at 09.51.23.jpg" alt="Model 1">
+      <img src="resimler/WhatsApp Image 2026-02-17 at 09.51.24.jpg" alt="Model 2">
+      <img src="resimler/WhatsApp Image 2026-02-17 at 09.51.24.png.jpg" alt="Model 3">
+    </div>
+    <button class="prev" onclick="moveSlider(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlider(1)">&#10095;</button>
+  </div>
+  </div>
+
+  <div class="model-info">
+    <h3>Dragon-Serisi 240</h3>
+    <p>Dayanıklı Alüminyum taban ve yüksek manevra kabiliyeti.</p>
+    <h4>Açıklama</h4>
+    <p>Dragon Serisi 2.40, dört ayrı valf sistemi sayesinde hızlı ve güvenli şekilde şişirilebilir...</p>
+   <a href="https://www.letgo.com/ad/1725207417" target="_blank" class="model-btn">Detaylı Bilgi</a>
+  </div>
+</div>
+
+</section>
+
+    <section id="istatistikler" style="padding: 60px 10%; background: var(--ana-renk); color: white; text-align: center;">
+      <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+        <div class="stat-item"><h2 class="sayac" data-target="345">0</h2><p>Mutlu Müşteri</p></div>
+        <div class="stat-item"><h2 class="sayac" data-target="8">0</h2><p>Yıllık Tecrübe</p></div>
+        <div class="stat-item"><h2 class="sayac" data-target="150">0</h2><p>Yıllık Üretim Hacmi</p></div>
+      </div>
+    </section>
+    
+    <section id="hakkimizda" style="padding: 100px 10%; background: #fff">
+      <div style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap">
+        <div style="flex: 1; min-width: 300px">
+          <img src="resimler/vitrin foto 2.jpg" alt="BSE Marin Üretim" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);" />
+        </div>
+        <div style="flex: 1; min-width: 300px">
+          <h2 class="section-title" style="margin-bottom: 25px">Biz Kimiz?</h2>
+          <p style="font-size: 1.1rem; color: #555; margin-bottom: 20px">
+            <strong>BSE Marin</strong>, denizcilik sektöründe yılların verdiği tecrübe ve tutkuyla, şişme bot üretimi ve yedek parça tedariği konusunda öncü bir marka olmayı hedeflemektedir.
+          </p>
+          <div style="display: flex; gap: 20px; margin-top: 30px">
+            <div style="text-align: center">
+              <h4 style="color: var(--vurgu-renk); font-size: 2rem">100%</h4>
+              <p style="font-size: 0.8rem; font-weight: 600">Yerli Üretim</p>
+            </div>
+            <div style="text-align: center">
+              <h4 style="color: var(--vurgu-renk); font-size: 2rem">7/24</h4>
+              <p style="font-size: 0.8rem; font-weight: 600">Destek</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer id="iletisim" style="background: #0a2342; color: white; padding: 60px 10%; text-align: center;">
+      <h2>BSE MARIN</h2>
+      <p>📍 İstanbul - Arnavutköy</p>
+      <p>📞 +90 536 256 33 71</p>
+      <p>📞 +90 536 486 59 38</p>
+      <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.6">&copy; 2026 BSE Marin. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <a href="https://wa.me/905362563371" class="whatsapp-fixed" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+    <div id="resimKutusu" class="modal-ekran" onclick="kapat()">
+      <span class="kapat-butonu" onclick="kapat()">&times;</span>
+      <img class="modal-resim" id="tamEkranResim" onclick="event.stopPropagation()">
+    </div>
+
+    <script>
+      // Resim Büyütme
+      document.querySelectorAll(".product-image img").forEach(img => {
+        img.onclick = e => {
+          e.stopPropagation();
+          document.getElementById("resimKutusu").style.display = "flex";
+          document.getElementById("tamEkranResim").src = img.src;
+        };
+      });
+      function kapat() { document.getElementById("resimKutusu").style.display = "none"; }
+      document.onkeydown = e => { if(e.key === "Escape") kapat(); };
+
+      // Dinamik Arama
+      document.getElementById('urunArama').addEventListener('keyup', function() {
+        let k = this.value.toLowerCase();
+        document.querySelectorAll('.product-card').forEach(c => {
+          c.style.display = c.querySelector('h3').innerText.toLowerCase().includes(k) ? "block" : "none";
+        });
+      });
+
+      // Dark Mode
+      const dBtn = document.getElementById('dark-mode-toggle');
+      if (dBtn) {
+          dBtn.onclick = () => {
+            document.body.classList.toggle('dark-mode');
+            dBtn.innerText = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+          };
+          if(localStorage.getItem('theme') === 'dark') { document.body.classList.add('dark-mode'); dBtn.innerText = '☀️'; }
+
+          const menuBtn = document.getElementById("menu-toggle");
+const menu = document.getElementById("nav-menu");
+
+menuBtn.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  /* ===== MOBIL MENU ===== */
+const menuBtn = document.getElementById("menu-toggle");
+const menu = document.getElementById("nav-menu");
+
+if (menuBtn) {
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+}
+});
+          // Sayaç Animasyonu
+const sayaclar = document.querySelectorAll(".sayac");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const n = entry.target;
+      const hedef = +n.getAttribute("data-target");
+      let baslangic = 0;
+      const guncelle = () => {
+        const artis = hedef / 100; // Animasyonun hızı
+        if (baslangic < hedef) {
+          baslangic += artis;
+          n.innerText = Math.ceil(baslangic);
+          setTimeout(guncelle, 20); // 20ms'de bir güncellenir
+        } else {
+          n.innerText = hedef;
+        }
+      };
+      guncelle();
+      observer.unobserve(n); // Rakam bir kere dolunca tekrar çalışmaz
+    }
+  });
+}, { threshold: 0.5 }); // Bölümün %50'si göründüğünde başlar
+
+sayaclar.forEach((s) => observer.observe(s));
+      }
+      /* ===== MOBIL MENU GELISMIS ===== */
+
+const menuBtn = document.getElementById("menu-toggle");
+const menu = document.getElementById("nav-menu");
+
+if (menuBtn) {
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
+  });
+
+  /* Menü dışına tıklayınca kapanır */
+  document.addEventListener("click", (e) => {
+    if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+      menu.classList.remove("active");
+      document.body.classList.remove("menu-open");
+    }
+  });
+
+  /* Menüden link seçince kapanır */
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+      document.body.classList.remove("menu-open");
+    });
+  });
+}
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,824 @@
+/* --- Temel Ayarlar & Font --- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+  --ana-renk: #0a2342;
+  --vurgu-renk: #00a8e8;
+  --buton-renk: #ff6b35;
+  --arka-plan: #f4f7f6;
+  --beyaz: #ffffff;
+  --gri: #666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--arka-plan);
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+/* Yedek Parça Butonu Özel Stili */
+.katalog-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background-color: #25d366; /* Diğer butonlarla aynı yeşil */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+  border: 2px solid #25d366;
+}
+
+.katalog-btn:hover {
+  background-color: #128c7e;
+  border-color: #128c7e;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* --- Modern Navigasyon --- */
+nav {
+  background: rgba(10, 35, 66, 0.85);
+  backdrop-filter: blur(10px);
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Logo ile yazı arasındaki boşluk */
+  text-decoration: none;
+}
+/* Modeller Butonu - Renk Güncellemesi */
+.model-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background-color: #25d366; /* WhatsApp Yeşili ile aynı yapıldı */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+  border: 2px solid #25d366;
+}
+
+.model-btn:hover {
+  background-color: #128c7e; /* Üzerine gelince biraz daha koyu yeşil */
+  border-color: #128c7e;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.model-btn:hover {
+  background-color: transparent;
+  color: var(--ana-renk);
+  transform: translateY(-2px);
+}
+
+nav .logo img {
+  max-height: 55px; /* Logonun yüksekliği */
+  width: auto;
+  transition: 0.3s ease;
+}
+
+nav .logo span {
+  color: var(--beyaz);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Üzerine gelince logo ve yazının efekt alması için */
+nav .logo:hover img {
+  transform: scale(1.05);
+}
+/* Yedek Parça ve Modeller Butonları */
+.katalog-btn,
+.model-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: #25d366; /* WhatsApp Yeşili */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.katalog-btn:hover,
+.model-btn:hover {
+  background-color: #128c7e;
+  transform: translateY(-2px);
+}
+
+/* Modellerdeki Resim Alanını Düzeltme */
+.model-image {
+  display: flex;
+  overflow-x: auto; /* Resimler çoksa yana kaysın */
+  gap: 10px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.model-image img {
+  flex: 0 0 100%; /* Her resim tam genişlik kaplasın */
+  scroll-snap-align: start;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 250px;
+}
+
+nav .logo:hover span {
+  color: var(--vurgu-renk); /* Üzerine gelince yazı rengi değişir */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: var(--beyaz);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--vurgu-renk);
+}
+
+/* --- Hero Bölümü (Görsel Odaklı) --- */
+.hero {
+  height: 100vh;
+  /* Resim ismindeki boşluklar için ters eğik çizgi kullanıldı */
+  background:
+    linear-gradient(rgba(10, 35, 66, 0.5), rgba(10, 35, 66, 0.7)),
+    url("resimler/vitrin\ foto\ 2.jpg") no-repeat center center/cover !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--beyaz);
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease;
+}
+
+.hero p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 35px;
+  max-width: 800px;
+  animation: fadeInUp 1.2s ease;
+}
+
+/* --- Butonlar --- */
+.btn {
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.4s;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--buton-renk);
+  color: var(--beyaz);
+  box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(255, 107, 53, 0.5);
+}
+
+/* --- Ürün & Hizmet Kartları --- */
+.product-grid,
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 0;
+}
+/* Modeller Bölümü Kart Düzenlemesi */
+.model-card {
+  background: var(--beyaz);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  border: 1px solid #eee;
+  max-width: 800px; /* Kartın aşırı büyümesini engeller */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Resim Alanı ve Kaydırma Çubuğu Düzenlemi */
+.model-image {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  background: #f9f9f9;
+  height: 350px; /* Resimlerin yüksekliğini sabitledik */
+}
+
+.model-image img {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  object-fit: contain; /* Resmin kesilmeden kutuya sığmasını sağlar */
+  padding: 10px;
+}
+
+/* Kart İçindeki Yazı Alanı */
+.model-info {
+  padding: 20px;
+  background: #fff;
+}
+
+.model-info h3 {
+  font-size: 1.8rem;
+  color: var(--ana-renk);
+}
+
+.model-info h4 {
+  margin-top: 15px;
+  border-bottom: 2px solid var(--vurgu-renk);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Kaydırma çubuğunu (Scrollbar) daha ince ve şık yapalım */
+.model-image::-webkit-scrollbar {
+  height: 6px;
+}
+.model-image::-webkit-scrollbar-thumb {
+  background: var(--vurgu-renk);
+  border-radius: 10px;
+}
+/* Tüm hizmet butonlarını standartlaştır */
+.card .model-btn,
+.card .buy-btn,
+.card .katalog-btn {
+  display: inline-block;
+  width: 80%; /* Buton genişliğini sınırladık */
+  margin: 15px auto;
+  padding: 10px;
+  background-color: #25d366 !important;
+  color: white !important;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.product-card,
+.card {
+  background: var(--beyaz);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  border: 1px solid #eee;
+  text-align: center;
+}
+
+.product-card:hover,
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(10, 35, 66, 0.1);
+  border-color: var(--vurgu-renk);
+}
+
+.product-image {
+  height: 200px;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.price {
+  color: var(--vurgu-renk);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.buy-btn {
+  display: block;
+  background: #25d366;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: #128c7e;
+}
+
+/* --- Resim Büyütme (Modal) --- */
+.modal-ekran {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-resim {
+  max-width: 90%;
+  max-height: 85%;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+/* --- WhatsApp Sabit --- */
+.whatsapp-fixed {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.whatsapp-fixed:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+/* --- Animasyonlar --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Mobil Uyumluluk --- */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+  nav ul {
+    display: none;
+  }
+}
+/* İstatistik Stilleri */
+#istatistikler {
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-item h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--vurgu-renk);
+  margin-bottom: 5px;
+}
+
+.stat-item h2::after {
+  content: "+"; /* Rakamların yanına + işareti ekler */
+}
+
+.stat-item p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+/* --- Resim Büyütme (Modal) Geliştirme --- */
+.modal-ekran {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* Arka plana tıklanabilir hissi verir */
+}
+
+.modal-resim {
+  max-width: 90%;
+  max-height: 85%;
+  border: 3px solid white;
+  border-radius: 10px;
+  cursor: default; /* Resmin üstünde imleç normale döner */
+}
+
+.kapat-butonu {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.kapat-butonu:hover {
+  color: var(--vurgu-renk);
+}
+#urunArama:focus {
+  box-shadow: 0 0 15px rgba(0, 168, 232, 0.4);
+  border-color: var(--ana-renk);
+}
+/* Karanlık Mod Değişkenleri */
+body.dark-mode {
+  --ana-renk: #050f1a;
+  --arka-plan: #121212;
+  --beyaz: #1e1e1e;
+  --yazi-renk: #e0e0e0;
+  --kart-arka-plan: #1d2b3a;
+}
+
+/* Karanlık modda metin ve kart düzeltmeleri */
+body.dark-mode {
+  background-color: var(--arka-plan);
+  color: var(--yazi-renk);
+}
+
+body.dark-mode .product-card,
+body.dark-mode .card,
+body.dark-mode #hakkimizda {
+  background: var(--kart-arka-plan) !important;
+  color: white;
+  border-color: #333;
+}
+
+body.dark-mode .section-title,
+body.dark-mode h3,
+body.dark-mode p {
+  color: #e0e0e0 !important;
+}
+/* Modeller Bölümü Kartı */
+.model-card {
+  background: var(--beyaz);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1000px; /* Kartı daha geniş ve büyük yaptık */
+}
+
+/* Slider Alanı */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 550px; /* Resim yüksekliğini büyüttük */
+  overflow: hidden;
+}
+
+/* Kaydırma Alanı ve Kırmızı Bar */
+#slider {
+  display: flex !important;
+  overflow-x: auto !important;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5px; /* Bar için küçük bir boşluk */
+}
+
+#slider img {
+  min-width: 100% !important;
+  height: 100%;
+  object-fit: cover; /* Resmi kutuya tam yayar, daha büyük görünür */
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+/* Kırmızı Scroll Bar Tasarımı */
+#slider::-webkit-scrollbar {
+  height: 10px;
+}
+
+#slider::-webkit-scrollbar-thumb {
+  background: #ff0000; /* Bar rengi Kırmızı */
+  border-radius: 10px;
+}
+
+#slider::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Barın yanlarındaki küçük okları yok eden kod */
+#slider::-webkit-scrollbar-button {
+  display: none;
+}
+/* ===== DARK MODE TAM DÜZELTME ===== */
+
+/* Genel arka plan ve yazılar */
+body.dark-mode {
+  background: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Açık renk inline section arka planlarını override et */
+body.dark-mode #katalog,
+body.dark-mode #modeller,
+body.dark-mode #hakkimizda {
+  background: #121212 !important;
+}
+
+/* Kartlar */
+body.dark-mode .product-card,
+body.dark-mode .card,
+body.dark-mode .model-card {
+  background: #1e1e1e !important;
+  color: #e0e0e0 !important;
+  border-color: #333 !important;
+}
+
+/* Model info alanı */
+body.dark-mode .model-info {
+  background: #1e1e1e !important;
+  color: #e0e0e0 !important;
+}
+
+/* Input alanı */
+body.dark-mode #urunArama {
+  background: #1e1e1e;
+  color: #fff;
+  border-color: var(--vurgu-renk);
+}
+
+/* Footer */
+body.dark-mode footer {
+  background: #050f1a !important;
+}
+
+/* Slider arka planı */
+body.dark-mode .model-image {
+  background: #1e1e1e;
+}
+
+/* Scroll bar track */
+body.dark-mode #slider::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+/* Metin renkleri */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p,
+body.dark-mode span {
+  color: #e0e0e0 !important;
+}
+.product-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff6b35;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+/* ===== MOBIL MENU ===== */
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobil görünüm */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 35, 66, 0.98);
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+}
+/* ===== MOBIL MENU ===== */
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 35, 66, 0.98);
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+}
+/* ===== MOBIL IYILESTIRME PAKETI ===== */
+
+/* Menü taşma önleme */
+nav {
+  position: relative;
+}
+
+/* Genel mobil düzen */
+@media (max-width: 768px) {
+  /* Hero alanı */
+  .hero {
+    padding: 80px 5% 60px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Bölüm padding küçültme */
+  section {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+
+  /* Ürün kartları sıkı görünüm */
+  .product-grid {
+    gap: 15px;
+  }
+
+  .product-card {
+    padding: 12px;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Model slider mobil uyum */
+  .model-card {
+    width: 100%;
+  }
+
+  .model-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Hakkımızda alanı alt alta */
+  #hakkimizda > div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Footer yazı boyutu */
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+/* Küçük telefonlar */
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  /* WhatsApp buton küçült */
+  .whatsapp-fixed {
+    width: 55px;
+    height: 55px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+/* Menü açılınca arka plan kilitlenir */
+body.menu-open {
+  overflow: hidden;
+}
